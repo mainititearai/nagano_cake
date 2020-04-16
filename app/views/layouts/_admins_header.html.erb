@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="container">
+        <div class="navbar-header">
+        </div>
+        <%= link_to "LOGO", '#', id: "logo" %>
+        <div class="collapse navbar-collapse navbar-right" id="navbarEexample7">
+          <ul class="nav navbar-nav">
+            <% if admin_signed_in? %>
+            <li><%= link_to "商品一覧",admin_products_path %></li>
+            <li><%= link_to "会員一覧", admin_members_path %></li>
+            <li><%= link_to "注文履歴一覧", admin_orders_path %></li>
+            <li><%= link_to "ジャンル管理", admin_genres_path %></li>
+            <% else %>
+            <% end %>
+          </ul>
+        </div>
+    </div>
+    </div>
+  </nav>
+</header><!-- /header -->
