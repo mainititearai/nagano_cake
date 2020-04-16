@@ -12,7 +12,7 @@ class DeviseCreateMembers < ActiveRecord::Migration[5.2]
       t.datetime :reset_password_sent_at
 
       ## Rememberable
-      t.datetime :remember_created_at
+      t.datetime :remember_created_at;
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
@@ -34,6 +34,14 @@ class DeviseCreateMembers < ActiveRecord::Migration[5.2]
 
 
       t.timestamps null: false
+      t.string :last_name, null: false
+      t.string :first_name, null: false
+      t.string :last_name_kana, null: false
+      t.string :first_name_kana, null: false
+      t.string :address, null: false
+      t.string :postcode, null: false
+      t.string :phone_number, null: false
+      t.integer :valid_status, null: false,default: 0
     end
 
     add_index :members, :email,                unique: true
